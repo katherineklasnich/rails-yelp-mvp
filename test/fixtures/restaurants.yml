@@ -5,11 +5,9 @@ one:
   address: MyString
   phone_number: MyString
   category: MyString
-  reviews: one
 
 two:
   name: MyString
   address: MyString
   phone_number: MyString
   category: MyString
-  reviews: two
