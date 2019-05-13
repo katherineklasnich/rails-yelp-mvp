@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
+resources :restaurants do
+  resources :reviews, only: [:new, :create]
+end
+
 #   RestaurantsController
 #   routing
 #     routes to #index (FAILED - 15)
@@ -12,12 +16,12 @@ Rails.application.routes.draw do
 # #     routes to #create (FAILED - 18)
 #   post "restaurants", to: "restaurants#create"
 
-resources :restaurants
+
 # ReviewsController
 #   routing
-#     routes to #new (FAILED - 19)
-  get "reviews", to: "reviews#new"
-#     routes to #create (FAILED - 20)
-  post "reviews", to: "reviews#create"
+# #     routes to #new (FAILED - 19)
+#   get "reviews", to: "reviews#new"
+# #     routes to #create (FAILED - 20)
+#   post "reviews", to: "reviews#create"
 
 end
