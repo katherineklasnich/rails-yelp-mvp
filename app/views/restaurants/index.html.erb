@@ -2,11 +2,12 @@
 
 
     <tbody>
-      <td><% @restaurants.each do |restaurant| %>
-        <td><% link_to restaurant_path(restaurant) do %>
-          <%= restaurant.name %></td>
-        <td><%= restaurant.address %></td>
-        <td><%= restaurant.category %></td>
+      <p><% @restaurants.each do |restaurant| %>
+        <p><%= link_to restaurant_path(restaurant) do %>
+          <%= restaurant.name %></p>
+          <% end %>
+        <p><%= restaurant.address %></p>
+        <p><%= restaurant.category %></p>
       <% end %>
     </tbody>
 
